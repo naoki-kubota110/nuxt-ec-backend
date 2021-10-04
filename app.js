@@ -34,13 +34,13 @@ app.use(
     optionsSuccessStatus: 200, 
   })
 );
-app.use(
-  cors({
-    origin: "https://dev.d207w1annru87o.amplifyapp.com", 
-    credentials: true, 
-    optionsSuccessStatus: 200, 
-  })
-);
+// app.use(
+//   cors({
+//     origin: "https://dev.d207w1annru87o.amplifyapp.com", 
+//     credentials: true, 
+//     optionsSuccessStatus: 200, 
+//   })
+// );
 
 // Router
 app.use('/user', userRouter)
