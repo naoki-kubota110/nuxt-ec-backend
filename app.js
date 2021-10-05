@@ -4,15 +4,24 @@ const orderRouter = require('./routes/order')
 const app = express()
 require('./mongodb')
 app.use(express.json()) //  この記述によりreqのbodyが読み込める
+const FRONT_URL = ENV['FRONT_URL']
 const cors = require('cors')
+// 本番環境用
 app.use(
   cors({
-    origin: ["https://nuxt-express-ec.an.r.appspot.com","http://localhost:3000"], 
+    origin: [FRONT_URL], 
     credentials: true, 
     optionsSuccessStatus: 200, 
-  },
-  )
+  })
 );
+// 開発環境用
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000"], 
+//     credentials: true, 
+//     optionsSuccessStatus: 200, 
+//   })
+// );
 
 // Router
 app.use('/user', userRouter)
