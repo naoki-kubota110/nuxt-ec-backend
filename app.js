@@ -29,7 +29,7 @@ app.use(express.json()) //  この記述によりreqのbodyが読み込める
 const cors = require('cors')
 app.use(
   cors({
-    origin: "http://localhost:3000", 
+    origin: "https://nuxt-express-ec.an.r.appspot.com", 
     credentials: true, 
     optionsSuccessStatus: 200, 
   })
