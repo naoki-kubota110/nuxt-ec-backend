@@ -10,7 +10,7 @@ const cors = require('cors')
 // 本番環境用
 app.use(
   cors({
-    origin: [FRONT_URL], 
+    origin: ["https://dev.d207w1annru87o.amplifyapp.com"], 
     credentials: true, 
     optionsSuccessStatus: 200, 
   })
