@@ -8,21 +8,21 @@ require('dotenv').config();
 const FRONT_URL = process.env.FRONT_URL
 const cors = require('cors')
 // 本番環境用
-app.use(
-  cors({
-    origin: ["https://dev.d207w1annru87o.amplifyapp.com"], 
-    credentials: true, 
-    optionsSuccessStatus: 200, 
-  })
-);
-// 開発環境用
 // app.use(
 //   cors({
-//     origin: ["http://localhost:3000"], 
+//     origin: ["https://dev.d207w1annru87o.amplifyapp.com"], 
 //     credentials: true, 
 //     optionsSuccessStatus: 200, 
 //   })
 // );
+// 開発環境用
+app.use(
+  cors({
+    origin: ["http://localhost:3000"], 
+    credentials: true, 
+    optionsSuccessStatus: 200, 
+  })
+);
 
 // Router
 app.use('/user', userRouter)
