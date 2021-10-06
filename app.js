@@ -4,13 +4,13 @@ const orderRouter = require('./routes/order')
 const app = express()
 require('./mongodb')
 app.use(express.json()) //  この記述によりreqのbodyが読み込める
-require('dotenv').config();
-const FRONT_URL = process.env.FRONT_URL
+// require('dotenv').config();
+// const FRONT_URL = process.env.FRONT_URL
 const cors = require('cors')
 // 本番環境用
 app.use(
   cors({
-    origin: [FRONT_URL], 
+    origin: ["https://nuxt-express-ec.an.r.appspot.com"], 
     credentials: true, 
     optionsSuccessStatus: 200, 
   })
